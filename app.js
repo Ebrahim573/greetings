@@ -25,8 +25,8 @@ app.post("/post" , (req,res)=>{
     console.log(req.body);
 
     data = {
-        yname:req.body.yname,
-        fname:req.body.fname,
+        username:req.body.yname,
+        friendname:req.body.fname,
         email:req.body.email
     }
     console.log(data);
@@ -66,17 +66,17 @@ app.get("/mailer/:id" , (req,res)=>{
     let mailTransporter = nodeMailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'wisingmail@gail.com',
-            pass: '#@%$*(&^^^$$^&^'
+            user: 'ebrahim000ebrahim@gmail.com',
+            pass: 'qwertyuiop#$123'
         }
     });
       
 
     let mailDetails = {
-        from: 'wisingmail@gail.com',
+        from: 'ebrahim000ebrahim@gmail.com',
         to: user.email,
-        subject: 'Happy 2022 Wish from '+ user.yname,
-        text: 'You have received a Suprise gift from ' + user.yname +' please click on the link to view it https://wishing-website2022.herokuapp.com/wish/'+user._id
+        subject: 'Happy 2022 Wish from '+ user.username,
+        text: 'You have received a Suprise gift from ' + user.username +' please click on the link to view it https://wishing-website2022.herokuapp.com/wish/'+user._id
     };
       
     mailTransporter.sendMail(mailDetails, function(err, data) {
