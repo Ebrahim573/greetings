@@ -1,23 +1,23 @@
     let email = document.getElementById("email");
-    let yname = document.getElementById("yname");
-    let fname = document.getElementById("fname")
+    let yname = document.getElementById("username");
+    let fname = document.getElementById("friendname")
     let validRegex =/^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+)\.([a-z]{2,8})(.[a-z]{2,8})?$/
     
     function validation() {
 
-    if (yname.value.trim()==""){
+    if (username.value.trim()==""){
         document.getElementById("error1").innerHTML="Enter Your Name";
         document.getElementById("error1").style.color="red";
-        yname.style.border="2px solid red";
-        yname.value="";
+        username.style.border="2px solid red";
+        username.value="";
         return false;
         
     }
-    else if(fname.value.trim()=="") {
+    else if(friendname.value.trim()=="") {
         document.getElementById("error2").innerHTML="Enter Your Friend Name";
         document.getElementById("error2").style.color="red";
-        fname.style.border="2px solid red";
-        fname.value="";
+        friendname.style.border="2px solid red";
+        friendname.value="";
         return false;
     } 
     else if(validRegex.test(email.value)===false){
