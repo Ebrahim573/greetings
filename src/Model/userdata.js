@@ -1,11 +1,11 @@
 const mongoose =require("mongoose");
-mongoose.connect('mongodb+srv://admin:user123@project1.cfkyt.mongodb.net/WishingData?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017',{useNewUrlParser: true, useUnifiedTopology: true});
 const Schema = mongoose.Schema;
 
 const WishSchema = new Schema({
 
-    yname:String,
-    fname:String,
+    username:String,
+    friendname:String,
     email:String
 })
 
